@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    image: jokes4
+    container_name: joke4
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/app
+
+
+# docker container run -p 8001:8000 -v $PWD:/app jokes3
