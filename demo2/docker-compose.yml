@@ -10,5 +10,5 @@ services:
     volumes:
       - ./:/app
 
-
-# docker container run --name mysite5 -p 5000:8000 -v $PWD:/app server
+# docker image build --tag server .
+# docker container run --name mysite5 -p 5000:8000 -v ./:/app server
