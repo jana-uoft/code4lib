@@ -1,4 +1,4 @@
-# Demo 2: Exposing Ports
+# Demo 2: Exposing Ports and Volumes
 
 ## Building an image
 ```
@@ -15,3 +15,11 @@ docker container run --name site1 -p 8000:8000 mysite
 ```
 
 Go to http://localhost:8000 to see your web page
+
+
+## Volumes
+```
+docker container run --name site1 -p 8000:8000 -v $PWD:/app mysite
+```
+
+Without stopping the container, edit `index.html` to see changes live

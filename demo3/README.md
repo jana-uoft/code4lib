@@ -1,23 +1,13 @@
-# Demo 2: Running a basic Python app
+# Demo 3: Advanced `docker-compose`
 
-The Python app writes a random joke to text file.
+## Omeka S in Docker
 
-## Build image:
-```
-docker build -t jokes2 .
-```
+This docker-compose contains:
 
-## Spin up container from the image:
-```
-docker container run --name joker2 jokes2
-```
+- Omeka S (latest version from https://github.com/omeka/omeka-s)
+- MariaDB
+- PHPMyAdmin
 
-## Delete container:
-```
-docker container rm joker2
-```
+Bring all the containers up with `docker-compose up`
 
-## Delete image:
-```
-docker image rm jokes2
-```
+Access the site via `http://localhost:80` and PHPMyAdmin via `http://localhost:8080`
