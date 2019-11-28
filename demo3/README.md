@@ -2,6 +2,8 @@
 
 ## Omeka S in Docker
 
+`https://github.com/monicau/omeka-s-docker`
+
 This docker-compose contains:
 
 - Omeka S (latest version from https://github.com/omeka/omeka-s)
