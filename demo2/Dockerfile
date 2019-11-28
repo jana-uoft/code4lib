@@ -2,8 +2,6 @@ FROM python:3
 
 WORKDIR /app
 
-RUN pip install pyjokes
-
 COPY . .
 
-CMD [ "python", "./jokes.py"]
+CMD [ "python", "-m", "http.server", "8000"]

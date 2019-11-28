@@ -1,7 +1,7 @@
 # Demo 1: Images and Containers
 
 ## Building an image
-`docker build [OPTIONS] {context}`
+`docker image build [OPTIONS] {context}`
 
 The docker build command builds Docker images from a Dockerfile and a “context”.
 A build’s context is the set of files located in the specified PATH or URL.
@@ -10,7 +10,7 @@ The build process can refer to any of the files in the context.
 Image Build options: https://docs.docker.com/engine/reference/commandline/build/#options
 
 ```
-docker build --tag jokes .
+docker image build --tag jokes .
 ```
 
 ## Spinning up a new container from an image
@@ -41,7 +41,7 @@ docker container start --attach joker
 ```
 
 ## Deleting a container
-`docker rm [OPTIONS] CONTAINER [CONTAINER...]`
+`docker container rm [OPTIONS] CONTAINER [CONTAINER...]`
 
 ```
 docker container rm joker1

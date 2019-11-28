@@ -1,6 +1,4 @@
-FROM python:3
-
-WORKDIR /app
+FROM python:2
 
 RUN pip install pyjokes
 

@@ -1,23 +1,17 @@
-# Demo 2: Running a basic Python app
+# Demo 2: Exposing Ports
 
-The Python app writes a random joke to text file.
-
-## Build image:
+## Building an image
 ```
-docker build -t jokes2 .
+docker build --tag mysite .
 ```
 
-## Spin up container from the image:
+## Spinning up a new container from an image
+`docker container run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]`
+
+Container Run options: https://docs.docker.com/engine/reference/commandline/run/#options
+
 ```
-docker container run --name joker2 jokes2
+docker container run --name site1 -p 8000:8000 mysite
 ```
 
-## Delete container:
-```
-docker container rm joker2
-```
-
-## Delete image:
-```
-docker image rm jokes2
-```
+Go to http://localhost:8000 to see your web page

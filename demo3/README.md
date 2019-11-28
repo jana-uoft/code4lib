@@ -1,29 +1,23 @@
-# Demo 3: Running a basic web site
+# Demo 2: Running a basic Python app
+
+The Python app writes a random joke to text file.
 
 ## Build image:
 ```
-docker build -t mysite1 .
+docker build -t jokes2 .
 ```
 
 ## Spin up container from the image:
 ```
-docker container run --name site1 mysite1 -p 8000:8000
+docker container run --name joker2 jokes2
 ```
-
-## Access the website
-
-Go to the URL http://localhost:8000 to see your web page
-
-## Stop the container
-
-Press CTRL C in the terminal window where you did `docker container run`
 
 ## Delete container:
 ```
-docker container rm site1
+docker container rm joker2
 ```
 
 ## Delete image:
 ```
-docker image rm mysite1
+docker image rm jokes2
 ```
